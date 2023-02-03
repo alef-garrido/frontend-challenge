@@ -1,0 +1,15 @@
+.header {
+  margin: 5rem 0;
+}
+.header * {
+  margin: .5rem 0;
+}
+.header h3 {
+  font-size: 3.8rem;
+  font-weight: 400;
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}

@@ -1,0 +1,86 @@
+.container {
+  width: 100%;
+  background-color: var(--primaryColor); ;  
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+  display: grid;
+  place-content: center;
+  color: var(--white);
+} 
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+.gridWrapper {
+  padding: 2rem 3rem;
+  display: grid;
+  place-content: center;
+  align-items: flex-start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5rem;
+}
+
+.gridWrapper * {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.firstColumn {
+  padding: 1rem 2rem;
+  grid-column: 1 / span 1;
+}
+
+.secondColumn {
+  grid-column: 2 / span 1;
+}
+
+.thirdColumn {
+  grid-column: 3 / span 1;
+}
+
+.forthColumn {
+  grid-column: 4 / span 1;
+}
+
+.forthColumn button {
+  background: none;
+}
+
+.title {
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+
+@media only screen and (min-width: 375px) {
+  .gridWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .gridWrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gridWrapper {
+    padding: 2rem 3rem;
+    display: grid;
+    place-content: center;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
