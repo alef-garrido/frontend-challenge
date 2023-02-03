@@ -5,3 +5,6 @@
   justify-content: center;
   text-align: center;
 }
+.widget_container {
+  margin: 3rem 0;
+}

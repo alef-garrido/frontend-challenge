@@ -1,0 +1,68 @@
+.counter_container {
+  align-self: center;
+  width: 100%;
+  max-width: 220px;
+  padding: .5rem;
+  margin: 1rem;
+  /* border: 5px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card_icon {
+  width: 100%;
+  background-color: var(--white);
+  padding: 3rem;
+  margin: 0 0 1rem 0;
+  filter: drop-shadow(0 0 0.75rem rgb(216, 215, 215));
+}
+.card_icon span {
+  width: 82px;
+  height: 82px;
+  justify-self: center;
+  display: grid;
+  place-content: center;
+}
+
+.icon_container {
+  /* margin: 0 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.counter {
+  width: 100%;
+  /* border: 5px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  align-items: center;
+  background-color: white;
+  border-radius: 10%;
+}
+ .counter_button_a {
+  width: 100%;
+  grid-column: 1 / span 1;
+}
+ .display_count {
+  color: black;
+  grid-column: 2 / span 1;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+}
+.display_count p {
+  margin: 0;
+  
+}
+ .counter_button_b {
+    width: 100%;
+    grid-column: 3 / span 1;
+ }
+ .reset_button {
+  width: 100%;
+  grid-column: 1 / span 3;
+}

@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className={styles.container}>
       <Nav />
-      <div>
+      <div className={styles.widget_container}>
         <main>{children}</main>
       </div>
       <Footer />
