@@ -1,10 +1,9 @@
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import CounterButton from "./components/CounterButton/CounterButton";
-import plus from "./assets/icons/plus.png";
-import minus from "./assets/icons/minus.png";
-import styles from "./styles/ProductCounter.module.css";
+import CounterButton from "./CounterButton/CounterButton";
+import plus from "../../assets/icons/plus.png";
+import minus from "../../assets/icons/minus.png";
+import styles from './ProductCounter.module.css';
 
 const ProductCounter = (props) => {
   
@@ -22,9 +21,9 @@ const ProductCounter = (props) => {
   };
  
   return (
-    <div className={styles.counter_container}>
+    <div>
       {/* ICON DISPLAY */}
-      <div className={styles.card_icon}>
+      <div >
         <div className={styles.icon_container}>
           <span>
             <img src={src} alt={"icon"} />
@@ -33,7 +32,7 @@ const ProductCounter = (props) => {
         </div>
       </div>
       {/* COUNTER */}
-      <div className={styles.counter}>
+      <div>
         {/* MINUS */}
         {itemsCounter === 0 ? (
           <CounterButton src={minus} />

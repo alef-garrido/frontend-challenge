@@ -1,7 +1,12 @@
+import { useState } from "react";
 import MainLayout from "../components/layouts/MainLayout";
+import ProductCounter from "../components/widgets/ProductCounter";
 import styles from "./StorePage.module.css";
+import itemsData from "../items";
 
 const StorePage = () => {
+  const [itemsCount, setItemsCount] = useState(0);
+
   return (
     <MainLayout>
       <header className={styles.header}>
@@ -13,6 +18,18 @@ const StorePage = () => {
           </p>
         </header>
       <div className={styles.container}>
+        {
+          itemsData.map(({ title, icon }, index) => {
+            return (
+              <ProductCounter
+                key={index}
+                value={0}
+                title={`${title}`}
+                src={`${icon}`}
+              />
+            );
+          })
+        }
       </div>
     </MainLayout>
   );
