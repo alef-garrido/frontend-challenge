@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.socialIcon {
+  margin: 0.5rem;
+  
+}
+
+.socialIcon img {
+  padding: .25rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}

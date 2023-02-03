@@ -1,0 +1,14 @@
+.container {
+  color: var(--white);
+  padding: .5rem;
+  border:  2px solid ;
+  cursor: pointer;
+}
+
+/* @media only screen and (min-width: 375px) {} */
+@media only screen and (min-width: 768px) {
+  .container {
+    display: none
+  }
+}
+/* @media only screen and (min-width: 1200px) {} */

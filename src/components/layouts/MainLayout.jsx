@@ -1,16 +1,15 @@
+import Nav from "../ui/Nav/Nav";
+import Footer from "../ui/Footer/Footer";
+import styles from "./MainLayout.module.css";
 
-import styles from "./MainLayout.module.css"
-
-const MainLayout = ( { children } ) => {
+const MainLayout = ({ children }) => {
   return (
     <div className={styles.container}>
-      {/* <Nav /> */}
+      <Nav />
       <div>
-        <main>
-          { children }
-        </main>
+        <main>{children}</main>
       </div>
-    {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
