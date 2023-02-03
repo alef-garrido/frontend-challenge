@@ -35,52 +35,115 @@ const summaryItems = [
 
 const StorePage = () => {
   const [itemsCount, setItemsCount] = useState(0);
+  const [totalM2, setTotalM2] = useState(0);
+  const [display, toggleDisplay] = useState(false)
+
+
+  const subtotal = totalM2 * 200
+  const tax = subtotal * 0.16
+  const totalPrice = subtotal + tax
+
+  const summaryItems = [
+    // {
+    //   concept: ' Total items ',
+    //   total: ` ${itemsCount} `,
+    // },
+    {
+      concept: ' Total M2 ',
+      total: ` ${totalM2} `,
+    },
+    {
+      concept: 'Subtotal',
+      total: ` $ ${subtotal} `,
+    },
+    {
+      concept: 'Tax',
+      total: `$ ${ tax } `,
+    },
+    {
+      concept: 'Total',
+      total: `$ ${ totalPrice } `,
+    },
+    {
+      concept: 'Due today 50%',
+      total: `$ ${ totalPrice / 2 } `,
+    },
+    
+  ]
+  
+  const onResetClick = () => {
+    setItemsCount(0)
+    setTotalM2(0)
+  }
 
   return (
-    <MainLayout>
-      <header className={styles.header_container}>
-        <h3>What items to store?</h3>
-        <p>
-          Select which items you wish to store before moving to <br /> your new
-          home. We&apos;ll keep &apos;em safe!
-        </p>
-      </header>
-      <div className={styles.gridContainer}>
-        {itemsData.map(({ title, icon }, index) => {
-          return (
-            <ProductCounter
-              key={index}
-              value={0}
-              title={`${title}`}
-              src={`${icon}`}
-            />
-          );
-        })}
-      </div>
-      <div className={styles.utils}>
-        <PrimaryButton text={"Clear"} variant="bordered" />
-        <PrimaryButton text={"Calculate"} variant="primary" />
-      </div>
-
-      <section className={styles.summary}>
+      <MainLayout>
+        <div className={ styles.gridContainer }  >
+    {
+       itemsData.map(({ title, icon, m2 }, index) => {
+        return (
+          <ProductCounter
+            key={index}
+            value={0}
+            title={`${title}`}
+            src={`${icon}`}
+            m2={ +m2 }
+            setTotalItems={setItemsCount}
+            setTotalM2={setTotalM2}
+            globalCount={itemsCount}
+          />
+        );
+      })
+    }
+    <div className={styles.utils}>
+      <PrimaryButton
+        text={'Clear'}
+        variant='bordered'
+        event={ onResetClick  }
+      />
+          <PrimaryButton
+        text={'Calculate'}
+        variant='primary'
+        event={ ()  => { toggleDisplay( prev => !prev )}}
+      />
+    </div>
+    <section className={styles.summary}>
         <h5>Summary</h5>
         <div className={styles.summary_display}>
-          <div className={styles.summary_item}>
-            <span>Total Items</span>
-            <span>{itemsCount}</span>
-          </div>
-          {summaryItems.map((i, index) => {
-            return (
-              <div key={index} className={styles.summary_item}>
-                <span>{i.concept}</span>
-                <span>{}</span>
-              </div>
-            );
-          })}
+        <div
+                   
+                     className={styles.summary_item}
+                  >
+                  <span>
+                    Total Items
+                  </span>
+                  <span>
+                    { itemsCount }
+                  </span>
+                  </div>
+            {
+              summaryItems.map((i, index) => {
+                return (
+                  <div
+                     key={index}
+                     className={styles.summary_item}
+                  >
+                  <span>
+                    {i.concept}
+                  </span>
+                  <span>
+                    { display === false ? 0 : i.total}
+                  </span>
+                  </div>
+                )
+              })
+            }
         </div>
-      </section>
-    </MainLayout>
+    </section>
+  </div>
+      </MainLayout>
   );
+
 };
 
 export default StorePage;
