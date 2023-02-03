@@ -4,7 +4,7 @@
 
 [Design preview](https://www.notion.so/Proficient-MTY-89d093bfe0804be7bc8ca3522558e083#5b81d4243b154e7aab22f084aee59b5c)
 
-![](./src/assets/app-screencast.gif)
+![](./src/assets/screen.png)
 
 
 ## Built With
@@ -25,7 +25,7 @@ Node.js
 
 ## Setup
 
-### Install
+### Create local instance
 
 You can run it on your local machine by cloning the project.
 
@@ -54,9 +54,9 @@ You may also see any lint errors in the console.
 
 👤 Oscar Garrido
 
-- GitHub: [lef-garrido](https://github.com/alef-garrido)
+- GitHub: [alef-garrido](https://github.com/alef-garrido)
 - Twitter: [Alef_Garrido](https://twitter.com/Alef_Garrido)
-- LinkedIn: [alef-g](https://www.linkedin.com/in/garrido-armando)
+- LinkedIn: [Oscar Garrido](https://www.linkedin.com/in/garrido-armando)
 
 
 
