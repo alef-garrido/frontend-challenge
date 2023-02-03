@@ -1,5 +1,5 @@
 .counter_container {
-  align-self: center;
+  justify-self: center;
   width: 100%;
   max-width: 220px;
   padding: .5rem;

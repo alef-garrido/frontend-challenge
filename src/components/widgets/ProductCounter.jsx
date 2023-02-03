@@ -5,24 +5,32 @@ import plus from "../../assets/icons/plus.png";
 import minus from "../../assets/icons/minus.png";
 import styles from './ProductCounter.module.css';
 
+
 const ProductCounter = (props) => {
   
-  const {  title, src, setTotalItems } = props;
+  const {  title, src, m2, setTotalItems, setTotalM2, globalCount } = props;
 
   const [itemsCounter, setItemsCounter] = useState(0);
   
- 
+  useEffect(() => {
+    globalCount === 0 ?
+    setItemsCounter(0)
+    : null
+  }, [globalCount])
   
+
   const handleAdd = () => {
-    setItemsCounter(itemsCounter + 1);
+    setItemsCounter(itemsCounter + 1)
     setTotalItems((prev) => prev + 1)
-    setTotalM2((prev) => prev + m2);
+    setTotalM2((prev) => prev + m2)
+
     };
 
   const handleSubstract = () => {
-    setItemsCounter(itemsCounter - 1);
+    setItemsCounter(itemsCounter - 1)
     setTotalItems((prev) => prev - 1)
-    setTotalM2((prev) => prev - m2);
+    setTotalM2((prev) => prev - m2)
+ 
   };
  
   return (
@@ -63,6 +71,10 @@ ProductCounter.propTypes = {
   value: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
+  m2: PropTypes.number.isRequired,
+  setTotalItems: PropTypes.func.isRequired,
+  setTotalM2: PropTypes.func.isRequired,  
+  globalCount: PropTypes.number.isRequired,  
 };
 
 export default ProductCounter;

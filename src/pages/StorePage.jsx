@@ -6,33 +6,6 @@ import PrimaryButton from "../components/widgets/PrimaryButton/PrimaryButton";
 import itemsData from "../items";
 import Header from "../components/ui/Header/Header";
 
-const summaryItems = [
-  // {
-  //   concept: ' Total items ',
-  //   total: ` ${itemsCount} `,
-  // },
-  {
-    concept: " Total M2 ",
-    total: ` totalM2`,
-  },
-  {
-    concept: "Subtotal",
-    total: ` $ subtotal `,
-  },
-  {
-    concept: "Tax",
-    total: `$ tax `,
-  },
-  {
-    concept: "Total",
-    total: `$ totalPrice} `,
-  },
-  {
-    concept: "Due today 50%",
-    total: `$ totalPrice / 2 `,
-  },
-];
-
 const StorePage = () => {
   const [itemsCount, setItemsCount] = useState(0);
   const [totalM2, setTotalM2] = useState(0);
@@ -50,23 +23,23 @@ const StorePage = () => {
     // },
     {
       concept: ' Total M2 ',
-      total: ` ${totalM2} `,
+      total: ` ${totalM2.toFixed(2)} `,
     },
     {
       concept: 'Subtotal',
-      total: ` $ ${subtotal} `,
+      total: ` $ ${subtotal.toFixed(2)} `,
     },
     {
       concept: 'Tax',
-      total: `$ ${ tax } `,
+      total: `$ ${ tax.toFixed(2) } `,
     },
     {
       concept: 'Total',
-      total: `$ ${ totalPrice } `,
+      total: `$ ${ totalPrice.toFixed(2) } `,
     },
     {
       concept: 'Due today 50%',
-      total: `$ ${ totalPrice / 2 } `,
+      total: `$ ${ (totalPrice / 2 ).toFixed(2)} `,
     },
     
   ]
@@ -78,6 +51,7 @@ const StorePage = () => {
 
   return (
       <MainLayout>
+        <Header />
         <div className={ styles.gridContainer }  >
     {
        itemsData.map(({ title, icon, m2 }, index) => {
@@ -91,6 +65,7 @@ const StorePage = () => {
             setTotalItems={setItemsCount}
             setTotalM2={setTotalM2}
             globalCount={itemsCount}
+
           />
         );
       })
