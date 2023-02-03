@@ -2,6 +2,7 @@ import { useState } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import ProductCounter from "../components/widgets/ProductCounter";
 import styles from "./StorePage.module.css";
+import PrimaryButton from "../components/widgets/PrimaryButton/PrimaryButton";
 import itemsData from "../items";
 import Header from "../components/ui/Header/Header";
 
@@ -31,6 +32,18 @@ const StorePage = () => {
           );
         })}
       </div>
+      <div className={styles.utils}>
+      <PrimaryButton
+        text={'Clear'}
+        variant='bordered'
+
+      />
+          <PrimaryButton
+        text={'Calculate'}
+        variant='primary'
+       
+      />
+    </div>
     </MainLayout>
   );
 };

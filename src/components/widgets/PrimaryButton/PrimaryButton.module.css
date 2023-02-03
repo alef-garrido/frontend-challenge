@@ -1,0 +1,13 @@
+.button_primary {
+  min-width: 200px;
+  background:  var(--primaryColor);
+  border-radius: 6%;
+  padding: 1rem 3rem;
+}
+.button_bordered {
+  background-color: var(--white);
+  min-width: 200px;
+  border: 2px solid var(--primaryColor);
+  border-radius: 6%;
+  padding: 1rem 3rem;
+}

@@ -1,0 +1,19 @@
+.custom_button {
+  background: var(--secondaryColor);
+  border-radius: 10%;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.custom_button:hover {
+  background: var(--primaryColor);
+}
+
+.custom_button span {
+  display: grid;
+  place-content: center;
+}
+
+.custom_button img {
+  width: 20px;
+}
