@@ -63,10 +63,6 @@ ProductCounter.propTypes = {
   value: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
-  m2: PropTypes.number.isRequired,
-  setTotalItems: PropTypes.func.isRequired,
-  setTotalM2: PropTypes.func.isRequired,  
-  globalCount: PropTypes.number.isRequired,  
 };
 
 export default ProductCounter;
