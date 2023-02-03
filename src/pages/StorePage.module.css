@@ -1,0 +1,24 @@
+.container{
+  height: 100vh;
+  background: var(--white);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header{
+  width: 100%;
+  margin: 3rem 0;
+}
+.header h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.header p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.main{
+  background: var(--secondaryColor);
+}
