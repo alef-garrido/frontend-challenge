@@ -75,4 +75,12 @@ li {
     gap: 5rem;
   }
 }
-/* @media only screen and (min-width: 1200px) {} */
+@media only screen and (min-width: 1200px) {
+  .gridWrapper {
+    padding: 2rem 3rem;
+    display: grid;
+    place-content: center;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
