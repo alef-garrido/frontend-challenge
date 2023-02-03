@@ -16,6 +16,11 @@
   font-size: 1.3rem;
   margin: 1.5rem;
   color: var(--white);
+  cursor: pointer;
+}
+
+.container ul >li:hover {
+  color: var(--black);
 }
 
 @media only screen and (min-width: 375px) {
